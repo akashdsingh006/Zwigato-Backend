@@ -3,7 +3,7 @@ const app=express();
 const router=express.Router();
 const bcrypt= require('bcryptjs')
 
-secretKey=MyNameisAkashAnand78965412lopki4
+const secretKey='MyNameisAkashAnand78965412lopki4'
 const jwt=require('jsonwebtoken')
 
 
