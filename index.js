@@ -1,9 +1,10 @@
 const express=require('express')
 const app=express();
-const port=5000 || process.env.PORT
+
 const mongoDB=require('./db');
 const F_URL=process.env.F_URL
 
+const port=5000 || process.env.PORT
 
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", `${F_URL}`);
