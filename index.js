@@ -7,12 +7,10 @@ const F_URL=process.env.F_URL
 const port=5000 || process.env.PORT
 
 app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", `${F_URL}`);
-    res.header(
-      "Access-Control-Allow-Headers",
-      "Origin, X-Requested-With, Content-Type, Accept"
-    );
-    next();
+  res.setHeader('Access-Control-Allow-Origin', `${F_URL}`);
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  next();
   });
 
 mongoDB()
